@@ -4,27 +4,24 @@
     <title>Home</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
+   
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.plot.ly/plotly-latest.min.css" />
   </head>
   <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
     <main>
       <h1>Search</h1>
       <form action="/url" method="GET">
         <p>Please enter the question:</p>
-        <input id="queston" , type="text" , size="61" />
+        <input id="question"  type="text" size="61" />
         <button id="button" type="button">send</button>
       </form>
       <br />
-      <textarea id="message" rows="10" cols="61"> </textarea>
+      <div id="plot">This is the plot</div>
+      <div id="octants"></div>
+      <textarea id="message" rows="10" cols="61"></textarea>
     </main>
   </body>
 </html>
