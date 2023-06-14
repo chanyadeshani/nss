@@ -13,6 +13,12 @@ async function postJSON(data) {
 
     const result = await response.json();
 
+    const button = document.querySelector('#button');
+    const messageBox = document.querySelector('#message');
+    button.addEventListener('click', () => {
+    messageBox.innerText = "Reviews: " + result;
+});
+
     console.log('Success:', result);
   } catch (error) {
     console.error('Error:', error);
@@ -28,10 +34,4 @@ var question = document.getElementById('queston').value;
 console.log(question);
 postJSON(data);
 
-var text = 'Nothing yet ';
 
-const button = document.querySelector('#button');
-const messageBox = document.querySelector('#message');
-button.addEventListener('click', () => {
-  messageBox.innerText = "Reviews: " + text;
-});
