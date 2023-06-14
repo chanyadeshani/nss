@@ -1,7 +1,7 @@
 async function postJSON(data) {
   try {
     const response = await fetch(
-      'https://nss-container-p57byuk3wa-uc.a.run.app/api/ask',
+      'https://hpmt-mock-api.herokuapp.com/ask',
       {
         method: 'POST', // or 'PUT'
         headers: {
@@ -11,7 +11,7 @@ async function postJSON(data) {
       }
     );
 
-    const result = response;
+    const result = await response.json();
 
     console.log('Success:', result);
   } catch (error) {
