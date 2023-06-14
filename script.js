@@ -16,7 +16,7 @@ async function postJSON(data) {
     const button = document.querySelector('#button');
     const messageBox = document.querySelector('#message');
     button.addEventListener('click', () => {
-    messageBox.innerText = "Reviews: " + result;
+    messageBox.innerText = "Reviews: " + result.reviewText;
 });
 
     console.log('Success:', result);
